@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/pesoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Peso: "
+        app:layout_constraintTop_toTopOf="@id/pesoEditText"
+        app:layout_constraintEnd_toStartOf="@+id/pesoEditText"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pesoEditText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="50dp"
+        android:ems="8"/>
+
+    <TextView
+        android:id="@+id/sexoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sexo (m/f):"
+        app:layout_constraintTop_toTopOf="@id/sexoEditText"
+        app:layout_constraintEnd_toStartOf="@+id/sexoEditText"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sexoEditText"
+        app:layout_constraintTop_toBottomOf="@id/pesoEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_marginTop="20dp"
+        android:ems="8"/>
+
+    <TextView
+        android:id="@+id/coposLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="N° Copos: "
+        app:layout_constraintTop_toTopOf="@id/coposEditText"
+        app:layout_constraintEnd_toStartOf="@+id/coposEditText"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/coposEditText"
+        app:layout_constraintTop_toBottomOf="@id/sexoEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_marginTop="20dp"
+        android:inputType="number"
+        android:ems="8"/>
+
+    <TextView
+        android:id="@+id/jejumLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Está de jejum? \n(s/n) "
+        app:layout_constraintTop_toTopOf="@id/jejumEditText"
+        app:layout_constraintEnd_toStartOf="@+id/jejumEditText"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/jejumEditText"
+        app:layout_constraintTop_toBottomOf="@id/coposEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_marginTop="20dp"
+        android:ems="8"/>
+
+    <Button
+        android:id="@+id/submitButton"
+        android:onClick="enviarDados"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/jejumEditText"
+        android:layout_marginTop="20dp"
+        android:text="Enviar Dados"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
